@@ -7,6 +7,10 @@ import { logger } from "../utils/logger";
 export const playerDatabase = async (): Promise<IPlayerModel[]> => {
   try {
     const filepath = path.join(__dirname, "players.json");
+    if (!fs.existsSync(filepath)) {
+      fs.writeFileSync(filepath, JSON.stringify([]));
+    }
+
     const playersData = JSON.parse(fs.readFileSync(filepath, "utf-8"));
   
     return playersData;
