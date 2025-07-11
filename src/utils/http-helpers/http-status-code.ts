@@ -12,7 +12,7 @@ enum HttpStatusCode {
   INTERNAL_SERVER_ERROR = 500,
 }
 
-/** */
+/** StatusCode: 200 */
 export const ok = async (data: any): Promise<IHttpResponseJson> => {
   return {
     statusCode: HttpStatusCode.OK,
@@ -20,7 +20,7 @@ export const ok = async (data: any): Promise<IHttpResponseJson> => {
   };
 };
 
-/** */
+/** StatusCode: 201 */
 export const created = async (data: any): Promise<IHttpResponseJson> => {
   return {
     statusCode: HttpStatusCode.CREATED,
@@ -28,7 +28,7 @@ export const created = async (data: any): Promise<IHttpResponseJson> => {
   };
 };
 
-/** */
+/** StatusCCode: 204 */
 export const noContent = async (): Promise<IHttpResponseJson> => {
   return {
     statusCode: HttpStatusCode.NO_CONTENT,
@@ -36,7 +36,7 @@ export const noContent = async (): Promise<IHttpResponseJson> => {
   };
 };
 
-/** */
+/** StatusCode: 400 */
 export const badRequest = async (data: any): Promise<IHttpResponseJson> => {
   return {
     statusCode: HttpStatusCode.BAD_REQUEST,
@@ -44,7 +44,7 @@ export const badRequest = async (data: any): Promise<IHttpResponseJson> => {
   };
 };
 
-/** */
+/** StatusCode: 401 */
 export const unauthorized = async (data: any): Promise<IHttpResponseJson> => {
   return {
     statusCode: HttpStatusCode.UNAUTHORIZED,
@@ -52,7 +52,7 @@ export const unauthorized = async (data: any): Promise<IHttpResponseJson> => {
   };
 };
 
-/** */
+/** StatusCode: 403 */
 export const forbidden = async (data: any): Promise<IHttpResponseJson> => {
   return {
     statusCode: HttpStatusCode.FORBIDDEN,
@@ -60,7 +60,7 @@ export const forbidden = async (data: any): Promise<IHttpResponseJson> => {
   };
 };
 
-/** */
+/** StatusCode: 404 */
 export const notFound = async (data: any): Promise<IHttpResponseJson> => {
   return {
     statusCode: HttpStatusCode.NOT_FOUND,
@@ -68,7 +68,7 @@ export const notFound = async (data: any): Promise<IHttpResponseJson> => {
   };
 };
 
-/** */
+/** StatusCode: 409 */
 export const conflict = async (data: any): Promise<IHttpResponseJson> => {
   return {
     statusCode: HttpStatusCode.CONFLICT,
@@ -76,7 +76,7 @@ export const conflict = async (data: any): Promise<IHttpResponseJson> => {
   };
 };
 
-/** */
+/** StatusCode: 500 */
 export const internalServerError = async (data: any): Promise<IHttpResponseJson> => {
   return {
     statusCode: HttpStatusCode.INTERNAL_SERVER_ERROR,
