@@ -2,7 +2,7 @@ import { createLogger } from "bs-logger";
 
 const dataAtual = new Date(Date.now());
 const dataFormatada = dataAtual.toISOString().split("T")[0];
-const pathName: string = "logs/app-logs-" + dataFormatada;
+const pathName: string = "logs/app-logs-"+dataFormatada+".txt";
 
 export const logger = createLogger({
   targets: process.env.NODE_ENV === "production" ? pathName : pathName,
