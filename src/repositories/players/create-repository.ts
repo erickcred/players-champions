@@ -21,7 +21,7 @@ export const createPlayerReposiroty = async (playerRequest: IPlayerModel): Promi
   }
   catch (error) {
     logger.error({ logPrefix: "createPlayerReposiroty" }, "Erro ao criar o jogador", error);
-    throw new Error("Erro ao criar o jogador" + error);
+    throw new Error("Erro ao criar o jogador " + error);
   }
   
 }

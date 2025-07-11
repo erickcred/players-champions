@@ -1,15 +1,11 @@
 import { findPlayerById } from "../../repositories/players/find-byid-repository";
-import { noContent, ok } from "../../utils/http-helpers/http-status-code";
+import { badRequest, notFound, ok } from "../../utils/http-helpers/http-status-code";
 
 export const getPlayerByIdService = async (id: number) => {
-  const data = await findPlayerById(id);
+  if (isNaN(id)) return badRequest({ message: "Invalid id" });
 
-  let response: any;
+  const response = await findPlayerById(id);
+  if (!response) return await notFound({ message: "Player not found" });
 
-  if (data)
-    response = await ok(data);
-  else
-    response = await noContent();
-
-  return response;
+  return await ok(response);
 };
