@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Adrian Corse",
+    "club": "Inter Miami",
+    "nationality": "Argentina",
+    "position": "RW",
+    "statistics": {
+      "overall": 93,
+      "pace": 85,
+      "shooting": 92,
+      "passing": 91,
+      "dribbling": 95,
+      "defending": 38,
+      "physicality": 65
+    },
+    "id": 1
+  },
+  {
+    "name": "Julian Amorino",
+    "club": "Inter Miami",
+    "nationality": "Argentina",
+    "position": "RW",
+    "statistics": {
+      "overall": 93,
+      "pace": 85,
+      "shooting": 92,
+      "passing": 91,
+      "dribbling": 95,
+      "defending": 38,
+      "physicality": 65
+    },
+    "id": 2
+  }
+]
