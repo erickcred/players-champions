@@ -1,10 +1,11 @@
 import { IPlayerModel } from "../../models/player-model"
-import { playerDatabase } from "../playr-database";
+import { playerDatabase } from "../players-database";
 
 export const findPlayerById = async (
   id: number
 ): Promise<IPlayerModel | undefined> => {
-  let player: IPlayerModel | undefined = playerDatabase.find((p) => p.id === id);
+  const players = await playerDatabase();
+  let player: IPlayerModel | undefined = players.find((p) => p.id === id);
 
   return player;
 }

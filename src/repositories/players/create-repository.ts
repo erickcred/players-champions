@@ -5,11 +5,8 @@ import { IPlayerModel } from "../../models/player-model";
 import { logger } from "../../utils/logger";
 
 export const createPlayerReposiroty = async (playerRequest: IPlayerModel): Promise<IPlayerModel | undefined> => {
-  console.log(__dirname);
-  console.log(path.join(__dirname, "../"));
-
   try {
-    const filePath = path.join(__dirname, "../asd/players.json");
+    const filePath = path.join(__dirname, "../players.json");
     if (!fs.existsSync(filePath)) {
       fs.writeFileSync(filePath, JSON.stringify([]));
     }
