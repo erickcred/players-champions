@@ -16,17 +16,7 @@ export const updateClubRepository = async (id: number, clubRequest: IClubModel):
     if (!club) return undefined;
 
     club.name = clubRequest.name;
-
-    // if (club.statistics && clubRequest.statistics) {
-    //   club.statistics.overall = clubRequest.statistics.overall ?? club.statistics.overall;
-    //   club.statistics.pace = clubRequest.statistics.pace ?? club.statistics.pace;
-    //   club.statistics.shooting = clubRequest.statistics.shooting ?? club.statistics.pace;
-    //   club.statistics.passing = clubRequest.statistics.passing ?? club.statistics.pace;
-    //   club.statistics.dribbling = clubRequest.statistics.dribbling ?? club.statistics.pace;
-    //   club.statistics.defending = clubRequest.statistics.defending ?? club.statistics.pace;
-    //   club.statistics.physicality = clubRequest.statistics.physicality ?? club.statistics.pace;
-    // }
-
+   
     fs.writeFileSync(filePath, JSON.stringify(clubsData));
     return club;
   } catch (error) {
