@@ -8,6 +8,8 @@ import { logger } from "../../utils/logger";
 export const updatePlayerService = async (id: number, playerRequest: IPlayerModel) => {
   let player: IPlayerModel | undefined;
 
+  if (isNaN(id)) return badRequest({ message: "Invalid id" });
+
   try {
     const filePath = path.join(__dirname, "../../repositories/players.json");
     const playersData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
